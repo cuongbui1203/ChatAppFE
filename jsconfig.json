@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "jsx": "react",
+    "paths": {
+      "~/*": ["./*"],
+      "@renderer": ["./src/renderer/src/"],
+      "@main": ["./src/main/"],
+      "@preload": ["./src/preload/"],
+      "@img": ["./src/renderer/src/assets/imgs/"],
+      "@store": ["./src/renderer/src/store/"]
+    }
+  }
+}

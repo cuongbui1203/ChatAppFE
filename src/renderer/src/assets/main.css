@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+}
+
+body {
+  background: url(./imgs/bg.jpg);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 98%;
+  height: 90%;
+  background-color: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(19px) saturate(180%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #313030;
+}
+
+.titlebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 20px;
+  background-color: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(10px) saturate(180%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  z-index: 5;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  -webkit-app-region: no-drag;
+}
+
+.nav-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.nav-button:hover {
+  filter: brightness(90%);
+}
+
+#close {
+  background-color: #ff605c;
+}
+
+#minimize {
+  background-color: #ffbd44;
+}
+
+#maximize {
+  background-color: #00ca4e;
+}
+
+.drag-region {
+  flex-grow: 1;
+}
